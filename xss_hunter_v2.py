@@ -18,7 +18,12 @@ Upgrades over v1:
   - Session token analysis
   - Auto parameter discovery from JS
 """
+import streamlit as st
 
+# This pulls the value you just saved in the dashboard
+api_key = st.secrets["OPENROUTER_API_KEY"]
+
+st.write("API Key loaded successfully!")
 import streamlit as st
 import requests
 import json
